@@ -111,8 +111,11 @@ mat1 = matrix(, nrow = 5, ncol = 4)
 dim(mat1)
 
 x = c(1, 2, 3,4 ,5)
-X = list(2.5, TRUE, 1:3)
+X = list(FALSE, 1:4,5,3)
 as.vector(unlist(X))
+print(x)
+x[3]='naman'
+print(x)
 
 ###################################################
 ## End 
