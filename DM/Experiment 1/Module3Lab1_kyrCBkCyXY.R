@@ -5,7 +5,7 @@ ls()
 ###################################################
 ## Step 0: Getting started with R 
 ###################################################
-setwd("C:/Users/naman/OneDrive/Desktop/LECTURES/DM/Experiment 1")
+setwd("C:/Users/naman/Desktop/LECTURES/LECTURES-sem5/DM/Experiment 1")
 lab1 <- read.table("lab1_01.txt", sep="|", header=TRUE)
 lab2 <- read.table("lab1_02.txt", sep="|", header=TRUE)
 
@@ -38,7 +38,7 @@ summary(nlab1)
 
 # same correlation values or different? 
 
-cor(nlab1)
+cor(lab1)
 
 # clean up and save
 
@@ -107,6 +107,15 @@ tellme <- function(x) {
   invisible()
 }
 tellme(t)
+mat1 = matrix(, nrow = 5, ncol = 4)
+dim(mat1)
+
+x = c(1, 2, 3,4 ,5)
+X = list(FALSE, 1:4,5,3)
+as.vector(unlist(X))
+print(x)
+x[3]='naman'
+print(x)
 
 ###################################################
 ## End 
