@@ -5,16 +5,16 @@ ls()
 ###################################################
 ## Step 0: Getting started with R 
 ###################################################
-setwd("~/LAB01")
+setwd("C:/Users/naman/OneDrive/Desktop/LECTURES/DM/Experiment 1")
 lab1 <- read.table("lab1_01.txt", sep="|", header=TRUE)
-lab2 <- read.table("lab1_02.txt", sep="|", header=TRUE) 
+lab2 <- read.table("lab1_02.txt", sep="|", header=TRUE)
 
 # look at some data values 
 
 head(lab1, n=10)
 tail(lab2, n=10)
 
-# lets look in more detail 
+# lets look in more detail
 
 
 summary(lab1)
@@ -23,7 +23,7 @@ summary(lab1)
 
 nlab1 <- lab1[,2:3]
 
-# what did we get? 
+# what did we get?
 
 
 
