@@ -1,0 +1,15 @@
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.font-bashful {
+  font-family: "Times New Roman";
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
