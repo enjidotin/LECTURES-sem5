@@ -1,7 +1,7 @@
 # R - Lab 3
 
 # Step 1: Start R and Read the Data Set Back Into Your Workspace
-setwd("~/LAB01")
+setwd("C:/Users/naman/Desktop/LECTURES/LECTURES-sem5/dm/Experiment 2")
 options(digits=3)
 
 ls()
@@ -132,7 +132,7 @@ q()
 
 # Step 2.	R will ask you if you want to save your workspace. Answer ?no.?
                                     
-End of required Lab Exercise 2 
+#End of required Lab Exercise 2 
 
 # 
 # Lab 2.1: ANOVA 
@@ -140,7 +140,7 @@ End of required Lab Exercise 2
 # and walk through these tutorials
 #
 
-Suggested additional labs:
+#Suggested additional labs:
 
 # I. ANOVA
 #
