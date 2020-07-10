@@ -59,7 +59,7 @@ head(ds)
 
 wt <- table(wealth)
 percent <- wt/sum(wt)*100
-wt <- rbind(wt, percent)
+wt <- cbind(wt, percent)
 wt
 plot(wt)    # this kind of sucks
 
