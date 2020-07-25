@@ -1,0 +1,28 @@
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  background-color: lightgray;
+}
+table {
+  border: 2px;
+  padding: 2%;
+}
+.logos {
+  width: 140px;
+  height: 140px;
+  border: auto;
+  margin: auto;
+}
+figcaption {
+  text-align: center;
+}
+.center {
+  text-align: center;
+  font-family: monospace;
+}
+.content {
+  font-family: monospace;
+  margin: 20 20 20 20;
+}

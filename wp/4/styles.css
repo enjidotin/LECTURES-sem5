@@ -1,0 +1,43 @@
+aside {
+  float: right;
+  background-color: lightgray;
+}
+table {
+  border: 2px;
+  padding: 2%;
+}
+.logos {
+  width: 140px;
+  height: 140px;
+  border: auto;
+  margin: auto;
+}
+figcaption {
+  text-align: center;
+}
+.center {
+  text-align: center;
+  font-family: monospace;
+}
+.content {
+  font-family: monospace;
+  margin: 2%;
+  padding: 0;
+}
+nav {
+  text-align: right;
+  background: lightgrey;
+}
+ul#menu li {
+  display: inline;
+}
+figure {
+  border-radius: ;
+}
+.foot {
+  display: inline;
+}
+.l1 {
+  display: inline;
+  padding: 10;
+}
