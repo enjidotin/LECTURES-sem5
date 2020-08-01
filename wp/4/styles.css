@@ -1,11 +1,29 @@
+.ourlogo {
+  border: 10;
+}
+body {
+  background-image: url("bg.jpg");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+}
 aside {
   float: right;
   background-color: lightgray;
 }
-table {
-  border: 2px;
-  padding: 2%;
+table,
+th,
+td {
+  border: 2px solid black;
+  padding: 0;
+  border-width: 5px;
+  border-collapse: collapse;
+  text-align: center;
 }
+tr:hover {
+  background-color: olivedrab;
+}
+
 .logos {
   width: 140px;
   height: 140px;
@@ -32,7 +50,7 @@ ul#menu li {
   display: inline;
 }
 figure {
-  border-radius: ;
+  border-radius: 5;
 }
 .foot {
   display: inline;
@@ -40,4 +58,31 @@ figure {
 .l1 {
   display: inline;
   padding: 10;
+}
+.text {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: darkslategrey;
+}
+footer {
+  font-style: oblique;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+.bottom-left:hover {
+  font-size: larger;
 }
