@@ -16,3 +16,6 @@ newdata
 predict(fit, newdata = list(),type = c("vector", "prob", "class", "matrix"))
 predict(fit,newdata=newdata,type="prob")
 predict(fit,newdata=newdata,type="class")
+predict(fit,newdata=newdata,type="matrix")
+predict(fit,newdata=newdata,type="vector")
+
