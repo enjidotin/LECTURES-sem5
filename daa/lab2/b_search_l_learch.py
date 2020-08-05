@@ -1,3 +1,9 @@
+# naman garg B032
+# lab 2 DAA
+# AIM: Implementation of Linear Search and Binary Search Technique..
+
+
+
 def lsearch(arr, x):
     comp = 0
     for i in range(len(arr)):
