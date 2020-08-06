@@ -1,41 +1,42 @@
-swaps=0
-comparisons=0
-def partition_q(arr,low,high):
-    global comparisons
-    global swaps
-    localComparisons=0
-    localSwaps=0
-    pivot=arr[high]
-    print("the pivot element is : ",pivot)
-    i=low-1
-    for j in range(low,high):
-        comparisons+=1
-        localComparisons+=1
-        if(arr[j]<pivot):
-            i+=1
-            arr[i],arr[j]=arr[j],arr[i]
-            localSwaps+=1
-            swaps+=1
-    arr[i+1],arr[high]=arr[high],arr[i+1]
-
-    print("Current list : ",arr)
-    print("Number of swaps: ",localSwaps)
-    print("Number of comparisons: ",localComparisons)
-    print('\n')
+def partition(l, r):
+    global comp, swap
+    c, s = 0, 0
+    i = l-1
+    pivot = l1[r]
+    print("Pivot Value: ", pivot,"\n")
+    
+    for j in range(l, r):
+        c += 1
+        if l1[j] < pivot:    #If current element is smaller than pivot
+            i += 1
+            l1[i], l1[j] = l1[j], l1[i]   #Swap Values
+            if i != j:
+                s += 1
+    
+    l1[i+1], l1[r] = l1[r], l1[i+1]    #Swap Values
+    if i+1 != r:
+        s += 1
+    comp += c
+    swap += s
+    print("Updated Array: ", l1)
+    print("No of Swaps: ", s)
+    print("No of Comparisons: ", c,"\n")
     return i+1
-def quickSort(arr,low,high):
-    global comparisons
-    if(low<high):
-        comparisons+=1
-        part=partition_q(arr,low,high)
-        quickSort(arr,low,part-1)
-        quickSort(arr,part+1,high)
 
+#Quicksort Function
+def quicksort(l, r):
+    if l < r:
+        pp = partition(l,r)
+        
+        #Separately sort elements before and after partition
+        quicksort(l,pp-1)
+        quicksort(pp+1,r)
+    
+l1 = list(map(int, input("Enter Numbers: ").split()))
+swap, comp = 0, 0
 
-arr= list(map(int,input("Enter list of numbers to sort: ").split()))
-n = len(arr)
-quickSort(arr,0,n-1)
-print("Sorted array :")
-print(arr)
-print("\ttotal no of swaps are -->",swaps)
-print("\tTotal no of comparisons are -->",comparisons)
+print("Input Array: ", l1,"\n")
+quicksort(0, len(l1)-1)
+print("\nOutput Array: ", l1)
+print("Total No of Swaps: ", swap)
+print("Total No of Comparisons: ", comp)
