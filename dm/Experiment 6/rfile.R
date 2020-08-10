@@ -49,5 +49,6 @@ incomeNoprob
 
 ansno <- agenoprob*jobsnoprob*desirenoprob*incomeNoprob
 ansno
-install.packages("e1071") 
-library("e1071")
+
+print("therefore the hypothesys is rejected")
+DSX
