@@ -1,0 +1,113 @@
+.ourlogo {
+  border: 10;
+}
+nav a:hover{
+  background-color: burlywood;
+  padding: 0.5%;
+  border: 1px;
+  border-radius: 5%;
+  box-shadow: 2px 2px 4px black;
+}
+body {
+  background-image: url("bg.jpg");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+}
+aside {
+  float: right;
+  background-color: lightgray;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 0;
+  border-width: 5px;
+  border-collapse: collapse;
+  text-align: center;
+}
+tr:hover {
+  background-color: rgb(169, 214, 80);
+  transition-delay: 0.2s;
+}
+
+.logos {
+  width: 140px;
+  height: 140px;
+  border: auto;
+  margin: auto;
+  animation-name: logokit;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+}
+.logos:hover {
+  animation-play-state:paused;
+}
+figcaption {
+  text-align: center;
+}
+.center {
+  text-align: center;
+  font-family: monospace;
+}
+.content {
+  font-family: monospace;
+  margin: 2%;
+  padding: 0;
+}
+nav {
+  text-align: right;
+  background: lightgrey;
+}
+ul#menu li {
+  display: inline;
+}
+figure {
+  border-radius: 5;
+}
+.foot {
+  display: inline;
+}
+.l1 {
+  display: inline;
+  padding: 10;
+}
+.text {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: darkslategrey;
+}
+footer {
+  font-style: oblique;
+  text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+.bottom-left:hover {
+  font-size: larger;
+}
+@keyframes logokit {
+    0%   {background-color: rgba();
+      transform: rotate(0deg);}
+    25%  {background-color: greenyellow;}
+    50%  {background-color: blueviolet;}
+    75%  {background-color: blueviolet;}
+    100% {background-color: goldenrod;
+      transform: rotate(360deg);}
+  
+}
