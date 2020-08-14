@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <button onclick="makefield()">make a field</button>
+    <button onclick="calcperc()">calculate percentage</button>
+  </body>
+  <br />
+  <script>
+    function makefield() {
+      var x = document.createElement("INPUT");
+      x.setAttribute("type", "text");
+      x.setAttribute("placeholder", "enter marks for ");
+
+      x.setAttribute("class", "marks");
+
+      document.body.appendChild(x);
+    }
+    function calcperc() {
+      var x = document.getElementsByClassName("marks");
+      var i;
+      total_marks = 0;
+      for (i = 0; i < x.length; i++) {
+        total_marks += parseInt(x[i].value);
+        const elements = document.getElementsByClassName("h");
+
+        while (elements.length > 0) elements[0].remove();
+      }
+      percentage = (total_marks / (x.length * 100)) * 100;
+      console.log(percentage);
+      console.log(x.length);
+      var h = document.createElement("H4");
+      h.setAttribute("class", "h");
+
+      var t = document.createTextNode(percentage);
+      h.appendChild(t);
+      document.body.appendChild(h);
+      const elements = document.getElementsByClassName("marks");
+      while (elements.length > 0) elements[0].remove();
+    }
+  </script>
+</html>
