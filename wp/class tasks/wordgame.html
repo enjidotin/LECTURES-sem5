@@ -12,21 +12,27 @@
 		var m_Name = name;
 		if(name[0]=='a'|| name[0]=='o'|| name[0]=='i'|| name[0]=='e'|| name[0]=='u')
 		{
-		var b_Name = "b" + name
-		var f_Name = "f" + name
-		var m_Name = "m" + name
+			var b_Name = "b" + name;
+			var f_Name = "f" + name;
+			var m_Name = "m" + name;
+
 		}
 		else if( name[0]=='m' ){
+			var b_Name = "b" + name.slice(1);
+			var f_Name = "f" + name.slice(1);
 			var m_Name = name.slice(1);
-
 
 		}
 		else if( name[0]=='b' ){
-		var b_Name = name.slice(1);
+			var b_Name = name.slice(1);
+			var f_Name = "f" + name.slice(1);
+			var m_Name = "m" + name.slice(1);
 
 		}
 		else if( name[0]=='f' ){
+			var b_Name = "b" + name.slice(1);
 			var f_Name = name.slice(1);
+			var m_Name = "m" + name.slice(1);
 
 		}
 		else{
