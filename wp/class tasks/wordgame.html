@@ -1,0 +1,39 @@
+<form style="text-align: center;">
+	<input type="text" id="name">
+    <input type="button" onClick="name_game();" value="play!">
+</form>
+
+<div id="ANSWER" style="text-align: center;"></div>
+<script>
+    function name_game() {
+		var name = document.getElementById("name").value;
+		var b_Name = name;
+		var f_Name = name;
+		var m_Name = name;
+		if(name[0]=='a'|| name[0]=='o'|| name[0]=='i'|| name[0]=='e'|| name[0]=='u')
+		{
+		var b_Name = "b" + name
+		var f_Name = "f" + name
+		var m_Name = "m" + name
+		}
+		else if( name[0]=='m' ){
+			var m_Name = name.slice(1);
+
+
+		}
+		else if( name[0]=='b' ){
+		var b_Name = name.slice(1);
+
+		}
+		else if( name[0]=='f' ){
+			var f_Name = name.slice(1);
+
+		}
+		else{
+		var b_Name = "b" + name.slice(1);
+		var f_Name = "f" + name.slice(1);
+		var m_Name = "m" + name.slice(1);
+		}
+		document.getElementById("ANSWER").innerHTML = "<p>" + name + ", " + name + " bo-" + b_Name + "<br>" + "Banana-fana fo-" + f_Name + "<br>" + "Fee-fi mo-" + m_Name + "<br>" + name + "!";
+	}
+</script>
