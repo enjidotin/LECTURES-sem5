@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+    </style>
+  </head>
+  <body onload="dis();">
+    <input type="text" id="disp" readonly="true" />
+    <br />
+    <script type="text/javascript">
+      function dis() {
+        var arr = [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "0",
+          "+",
+          "-",
+          "*",
+          "/",
+          "=",
+          "C",
+        ];
+        for (var i = 0; i < arr.length; i++) {
+          if (i % 3 == 0) {
+            document.body.appendChild(document.createElement("br"));
+          }
+          var bt = document.createElement("button");
+          bt.setAttribute("id", arr[i]);
+          bt.innerHTML = arr[i];
+          bt.style.margin = "10px";
+          bt.style.width = "40px";
+          bt.onclick = function () {
+            calc(this.id);
+          };
+          document.body.appendChild(bt);
+        }
+      }
+      function calc(a) {
+        if (a == "=") {
+          document.getElementById("disp").value = eval(
+            document.getElementById("disp").value
+          );
+        } else if (a == "C") {
+          document.getElementById("disp").value = "";
+        } else {
+          document.getElementById("disp").value += a;
+        }
+      }
+    </script>
+  </body>
+</html>

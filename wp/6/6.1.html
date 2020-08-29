@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+  </head>
+
+  <body>
+    <h1>pls fill</h1>
+    <form>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="GIRTRUDE STORM" />
+      <br /><br />
+
+      <label for="e_id">Email: </label>
+      <input
+        type="email"
+        id="e_id"
+        name="e_id"
+        placeholder="email@example.com"
+        required
+      />
+      <br /><br />
+
+      <label for="pwd">Password: </label>
+      <input
+        type="password"
+        id="pwd"
+        name="pwd"
+        placeholder="Minimum 8 characters"
+        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,120}.*$"
+        required
+      />
+      <br /><br />
+
+      <p>Gender</p>
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <br /><br />
+
+      <p>Sports You Play</p>
+      <input
+        type="checkbox"
+        name="Cricket"
+        id="Cricket"
+        checked
+        value="sport"
+      />
+      <label for="Cricket">Cricket</label>
+      <input type="checkbox" name="Football" id="Football" value="sport" />
+      <label for="Football">Football</label>
+      <input type="checkbox" name="Volleyball" id="Volleyball" value="sport" />
+      <label for="Volleyball">VolleyBall</label>
+      <br /><br />
+
+      <button>Submit</button>
+    </form>
+    <script type="text/javascript">
+      function validateform() {
+        var name = document.myform.name.value;
+        var password = document.getElementById("pass").value;
+
+        if (name == null || name == "") {
+          alert("Name can't be blank");
+          return false;
+        } else if (password.length < 8) {
+          alert("Password must be at least 8 characters long");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
