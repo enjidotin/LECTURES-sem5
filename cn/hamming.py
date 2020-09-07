@@ -7,6 +7,8 @@ def calculate_RedundantBits(m):
 
     for i in range(m):
         if(2**i >= m + i + 1):
+            print("there are ", i, " redundant bits required in ",
+                  m, " bit long binary number")
             return i
 
 
@@ -19,12 +21,12 @@ def add_RedundantBits(data, r):
 
     for i in range(1, m + r+1):
         if(i == 2**j):
-            resultis +='0'
+            resultis += '0'
             j += 1
         else:
             resultis = resultis + data[-1 * k]
             k += 1
-
+    print("after adding redundant bits, we have ", resultis[::-1])
     return resultis[::-1]
 
 
@@ -38,6 +40,7 @@ def calculate_ParityBits(arr, r):
             if(j & (2**i) == (2**i)):
                 val = val ^ int(arr[-1 * j])
         arr = arr[:n-(2**i)] + str(val) + arr[n-(2**i)+1:]
+    print("after adding parity bits, we have ", arr)
     return arr
 
 
