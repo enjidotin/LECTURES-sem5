@@ -1,4 +1,8 @@
-# Returns length of LCS for X[0..m-1], Y[0..n-1]
+# NAMAN GARG
+# B032
+# Aim: Implementation of Dynamic Programming Technique Algorithm Design. Write a program to implement Longest Common Subsequence (LCS) problem.
+
+
 def lcs(X, Y, m, n):
     L = [[None]*(n+1) for i in range(m+1)]
     L2 = [['X']*(n+1) for i in range(m+1)]
