@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="num" /><br /><br />
+    <button onclick="create()">Try</button>
+  </body>
+  <script>
+    function create() {
+      document.body.appendChild(document.createElement("br"));
+      document.body.appendChild(document.createElement("br"));
+      document.body.append("Fibonacci Series:");
+      document.body.appendChild(document.createElement("br"));
+
+      var input = document.getElementById("num").value;
+      var num1 = 0;
+      var num2 = 1;
+      var sum;
+      var i;
+      document.body.append(num1 + " " + num2 + " ");
+      for (i = 1; i < input; i++) {
+        sum = num1 + num2;
+        num1 = num2;
+        num2 = sum;
+        document.body.append(num2 + " ");
+      }
+
+      document.body.appendChild(document.createElement("br"));
+      document.body.appendChild(document.createElement("br"));
+      document.body.append("Factorial: ");
+      document.body.appendChild(document.createElement("br"));
+
+      var x = 1;
+      for (var i = 2; i <= input; i++) x = x * i;
+      document.body.append(x);
+
+      document.body.appendChild(document.createElement("br"));
+      document.body.appendChild(document.createElement("br"));
+      document.body.append("Armstrong Number: ");
+      document.body.appendChild(document.createElement("br"));
+
+      var x = input.length;
+      var sum = 0;
+      var temp = input;
+
+      while (temp > 0) {
+        rem = temp % 10;
+        sum += rem ** x;
+        temp = parseInt(temp / 10);
+      }
+
+      if (sum == input) {
+        document.body.append("It is an Armstong Number");
+      } else {
+        document.body.append("It is not an Armstong Number");
+      }
+    }
+  </script>
+</html>
