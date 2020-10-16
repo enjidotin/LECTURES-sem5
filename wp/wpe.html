@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q1</title>
+  </head>
+  <body>
+    <form>
+      <p name="para" id="para">This is a paragraph</p>
+    </form>
+    <script type="text/javascript">
+      var p = document.getElementById("para");
+      // var bd=document.getElementById("bd");
+      p.onmouseover = function () {
+        p.style.color = "red";
+        p.style.fontStyle = "italic";
+        p.style.fontSize = "20px";
+
+        var d = new Date();
+        p.innerHTML += d;
+      };
+    </script>
+  </body>
+</html>
