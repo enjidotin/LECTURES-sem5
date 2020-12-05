@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	</head>
+	<script type="text/javascript">
+
+		function ReverseString(str) { 
+   			return str.split('').reverse().join('') 
+	    } 
+		function vall(){
+			var u_n = document.getElementById("u_n").value;
+			var i = document.getElementById('P');
+			var i1 = document.getElementById('C');
+			var i2 = document.getElementById('J');
+	 
+			if (u_n==null || u_n=="")
+				  alert("User name can't be blank");
+			else if(u_n.charAt(0)=='x'){
+				if(i.checked == false && i1.checked == true && i2.checked == false)
+				  alert("Validated");
+				else
+					alert("Please select only C++");
+			}
+			else if(u_n.includes("vi")){
+				if(i.checked == false && i1.checked == true && i2.checked == true)
+				  alert("Validated");
+				else
+					alert("Please select only C++ and JAVA");
+			}
+			else if(ReverseString(u_n)==u_n){
+				if(i.checked == true || i1.checked == true || i2.checked == true)
+				  alert("Validated");
+				else
+					alert("Please select alteast one!!");
+			}
+		}
+	
+	</script>
+	<body>
+		<header style="text-align: center;">
+			<h1>Enter your details</h1>
+			<hr>
+		</header>
+		<form>
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input id ="u_n" type="text" name="username" autofocus required /></td>
+			</tr>
+		</table>
+		<strong>Languages -</strong><br>
+		<input type="checkbox" name="lan[]" id="P" value="PYTHON">PYTHON<br>
+        <input type="checkbox" name="lan[]" id="C"  value="C++">C++<br>
+        <input type="checkbox" name="lan[]" id="J"  value="JAVA">JAVA<br><br>
+		 <input type="submit" text="submit" onclick="vall()">
+		 </form>
+	</body>
+</html>

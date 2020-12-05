@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>Question3</title>
+	</head>
+	<script type="text/javascript">
+
+		function REV_STR(str) { 
+   			return str.split('').reverse().join('') 
+	    } 
+		function handleValidation(){
+			var UserName = document.getElementById("UserName").value;
+			var PY_VAL = document.getElementById('PY');
+			var CPP_VAL = document.getElementById('CPP');
+			var JAVA_VAL = document.getElementById('JAVA');
+	 
+			if (UserName==null || UserName=="")
+				  alert("User name can't be blank");
+			else if(UserName.charAt(0)=='x'){
+				if(PY_VAL.checked == false && CPP_VAL.checked == true && JAVA_VAL.checked == false)
+				  alert("Validated");
+				else
+					alert("select only C++");
+			}
+			else if(UserName.includes("vi")){
+				if(PY_VAL.checked == false && CPP_VAL.checked == true && JAVA_VAL.checked == true)
+				  alert("Validated");
+				else
+					alert("select only C++ && JAVA");
+			}
+			else if(REV_STR(UserName)==UserName){
+				if(PY_VAL.checked == true || CPP_VAL.checked == true || JAVA_VAL.checked == true)
+				  alert("Validated");
+				else
+					alert("select something!!");
+			}
+		}
+	
+	</script>
+	<body>
+		<header">
+			<h2>FORM VALIDATION</h2>
+		</header>
+		<form>
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input id ="UserName" type="text" name="username" autofocus required /></td>
+			</tr>
+		</table>
+		<strong>Languages -</strong><br>
+		<input type="checkbox" id="PY" value="PYTHON">PYTHON<br>
+        <input type="checkbox" id="CPP"  value="C++">C++<br>
+        <input type="checkbox" id="JAVA"  value="JAVA">JAVA<br><br>
+		 <input type="submit" text="submit" onclick="handleValidation()">
+		 </form>
+	</body>
+</html>
